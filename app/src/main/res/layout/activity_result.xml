@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Name"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/subtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="your fuel plan"
+        android:textSize="12sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <TextView
+        android:id="@+id/destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="place"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@id/destination_title" />
+
+    <TextView
+        android:id="@+id/distance_title"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Distance:"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/destination_title"
+        app:layout_constraintTop_toBottomOf="@+id/destination_title" />
+
+    <TextView
+        android:id="@+id/consumption_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Car consumption:"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/distance_title"
+        app:layout_constraintTop_toBottomOf="@+id/distance_title" />
+
+    <TextView
+        android:id="@+id/gasprice_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fuel price:"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/consumption_title"
+        app:layout_constraintTop_toBottomOf="@+id/consumption_title" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Total amount"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gasprice_title" />
+
+    <Button
+        android:id="@+id/newplan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Plan"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/destination_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Destination:"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtext" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/destination"
+        app:layout_constraintTop_toTopOf="@+id/distance_title" />
+
+    <TextView
+        android:id="@+id/consumption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="200"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/distance"
+        app:layout_constraintTop_toTopOf="@+id/consumption_title" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.5"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/consumption"
+        app:layout_constraintTop_toTopOf="@+id/gasprice_title" />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="51"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:maxLength="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="km"
+        android:textSize="15sp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/distance"
+        app:layout_constraintStart_toEndOf="@+id/distance"
+        app:layout_constraintTop_toTopOf="@+id/distance" />
+
+    <TextView
+        android:id="@+id/kml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="km per litre"
+        android:textSize="15sp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/consumption"
+        app:layout_constraintStart_toEndOf="@+id/consumption"
+        app:layout_constraintTop_toTopOf="@+id/consumption" />
+
+    <TextView
+        android:id="@+id/el"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€ per litre"
+        android:textSize="15sp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/price"
+        app:layout_constraintStart_toEndOf="@+id/price"
+        app:layout_constraintTop_toTopOf="@+id/price" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="298dp"
+        android:background="@drawable/shape1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="176dp"
+            android:layout_marginTop="60dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/result" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/purple"
+        app:layout_constraintBottom_toTopOf="@+id/destination_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtext" />
+
+    <TextView
+        android:id="@+id/euroamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€"
+        android:textSize="30sp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/amount"
+        app:layout_constraintStart_toEndOf="@+id/amount" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
